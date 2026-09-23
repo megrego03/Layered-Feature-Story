@@ -72,6 +72,36 @@
                         <td>If the overlap becomes too narrow or interferes with surrounding content, the quote returns to normal flow.</td>
                         <td>Test at 320px, 768px, 1280px, 200% zoom, with doubled paragraph content, and for pointer/focus safety.</td>
                     </tr>
+
+                    <tr>
+                        <td>Feature figure</td>
+                        <td>Groups the primary story image and its caption as one editorial element.</td>
+                        <td>The image and caption remain complete and readable as a rectangular figure.</td>
+                        <td>A small border-radius softens the figure container and visually separates the primary media from the surrounding article content.</td>
+                        <td>The figure remains in normal document flow and does not require a stacking context.</td>
+                        <td>If border-radius is unavailable or removed, the figure remains fully usable with square corners.</td>
+                        <td>Inspect at 320px, 768px, 1280px, and 200% zoom.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Feature image</td>
+                        <td>Provides the primary visual for the feature story.</td>
+                        <td>The full rectangular image remains visible and understandable in normal flow.</td>
+                        <td>A clip-path adds a purposeful editorial shape to the image without removing essential information.</td>
+                        <td>The image remains inside the normal-flow <code>.feature-figure</code> container and does not require a new stacking context.</td>
+                        <td>If clip-path is unsupported or disabled, the complete rectangular image remains visible.</td>
+                        <td>Test at 320px, 768px, 1280px, 200% zoom, and with clip-path disabled.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shape-wrapped supporting image</td>
+                        <td>Supports the discussion of bulletin-board design with a secondary contextual image.</td>
+                        <td>The image remains readable in normal document flow without shaped text wrapping.</td>
+                        <td>A circular image treatment and shape-outside allow nearby text to wrap around the image rather than its rectangular box.</td>
+                        <td>The image and wrapping text remain within the Design section.</td>
+                        <td>If shape-outside is unsupported or disabled, the image remains visible and the text returns to normal flow.</td>
+                        <td>Test at 320px, 768px, 1280px, 200% zoom, with doubled content, and with shape-outside disabled.</td>
+                    </tr>
                 </tbody>
             </table>
         </body>

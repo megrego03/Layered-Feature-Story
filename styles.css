@@ -124,6 +124,7 @@ main{
     margin:0;
     padding:var(--space-3);
     border:1px solid var(--color-border);
+    border-radius: var(--radius-medium);
 }
 
 img{
@@ -180,8 +181,9 @@ img{
 
     @supports (clip-path:polygon(0 0)){
         .feature-figure img{
-            clip-path:polygon(0 0,100% 5%,94% 100%,6% 94%);}
+            clip-path:polygon(0 0,100% 0,100% 90%,90% 100%, 0 100%);}
         }
+
         :focus-visible{
             outline:.2rem solid var(--color-focus);
             outline-offset:.2rem;
