@@ -144,7 +144,7 @@ img{
     width:min(40%,18rem);
     aspect-ratio: 1;
     object-fit: cover;
-    margin:0 1.5rem 1rem 0;
+    margin: 0 var(--space-4) var(--space-3) 0;
     border-radius:50%;
 }
 
@@ -154,14 +154,15 @@ img{
     background:var(--color-white);
 }
 
-@media (min-width:52rem){
+@media (min-width:60rem){
     main{
         grid-template-columns:15rem minmax(0,1fr);
     }
 
     .story-guide{
         position:sticky;
-        inset-block-start:1rem;
+        inset-block-start:var(--space-3);
+        z-index: var(--layer-sticky);
     }
 
     .pull-quote{
@@ -171,12 +172,12 @@ img{
         z-index:var(--layer-raised);
     }
 
-    
+
     @supports (shape-outside:circle(50%)){
         .shape-portrait{
             float:inline-start;
             shape-outside:circle(50%);
-            shape-margin:1rem;}
+            shape-margin:var(--space-3);}
         }
     }
 
