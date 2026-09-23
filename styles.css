@@ -91,8 +91,10 @@ img{
     font-size:1.35rem;
 }
 .shape-portrait{
-    width:min(45%,20rem);
-    margin:0 1rem 1rem 0;
+    width:min(40%,18rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin:0 1.5rem 1rem 0;
     border-radius:50%;
 }
 .documentation{
