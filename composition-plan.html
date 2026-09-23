@@ -45,13 +45,32 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Example only</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
-                        <td>Replace</td>
+                        <td>Issue badge</td>
+                        <td>Identifies the article as a community feature.</td>
+                        <td>The badge remains readable with the feature header content in normal flow.</td>
+                        <td>Relative positioning on the feature header and absolute positioning on the badge anchor the label to the header without using positioning for the main page layout.</td>
+                        <td>The <code>.feature-header</code> is the containing block for the absolutely positioned <code>.issue-badge</code>.</td>
+                        <td>The badge can return to normal flow or be repositioned if the available space becomes too narrow.</td>
+                        <td>Test at 320px, 768px, 1280px, 200% zoom, and with a long title.</td>
+                    </tr>
+                    <tr>
+                        <td>Story guide</td>
+                        <td>Provides navigation to the four main sections of the feature story.</td>
+                        <td>The navigation remains readable in normal source order before the article content.</td>
+                        <td>Sticky positioning keeps the story navigation available while the reader moves through the article without removing it from its normal layout area.</td>
+                        <td>The story guide remains within the main Grid layout and is bounded by its containing area.</td>
+                        <td>If sticky behavior is unavailable or becomes impractical at a smaller viewport, the navigation remains in normal flow.</td>
+                        <td>Test at 320px, 768px, 1280px, 200% zoom, keyboard focus, and page/section boundaries.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Pull quote</td>
+                        <td>Emphasizes the central idea of the feature story.</td>
+                        <td>The quotation remains readable as a normal blockquote in document flow.</td>
+                        <td>A controlled overlap gives the quotation editorial emphasis while keeping the surrounding story readable.</td>
+                        <td>The pull quote remains within the story content area and uses the story section as its layout context.</td>
+                        <td>If the overlap becomes too narrow or interferes with surrounding content, the quote returns to normal flow.</td>
+                        <td>Test at 320px, 768px, 1280px, 200% zoom, with doubled paragraph content, and for pointer/focus safety.</td>
                     </tr>
                 </tbody>
             </table>

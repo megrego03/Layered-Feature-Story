@@ -71,7 +71,7 @@ h3{
 }
 
 .eyebrow{
-    color:var(--color-white);
+    color:var(--color-teal);
     font-weight:700;
 }
 
@@ -82,26 +82,27 @@ h3{
 
 .issue-badge{
     position:absolute;
-    inset-block-start:1rem;
-    inset-inline-end:1rem;
-    padding:.5rem;
-    background:var(--color-accent);
-    color:#191919;
+    inset-block-start:var(--space-3);
+    inset-inline-end:var(--space-3);
+    padding:var(--space-2) var(--space-3);
+    background:var(--color-white);
+    color:var(--color-text);
+    font-weight:700;
 }
 
 main{
     display:grid;
-    gap:2rem;
+    gap:var(--space-5);
     max-width:72rem;
     margin:auto;
     padding:var(--space-3);
 }
 
-article{
+.story-content{
     min-width:0;
 }
 
-article section{
+.story-content section{
     display:flow-root;
     margin-block:3rem;
     scroll-margin-block-start:6rem;
@@ -121,9 +122,8 @@ article section{
 .feature-figure{
     position:relative;
     margin:0;
-    padding:1rem;
+    padding:var(--space-3);
     border:1px solid var(--color-border);
-    border-radius:var(--radius);
 }
 
 img{
@@ -133,9 +133,9 @@ img{
 }
 
 .pull-quote{
-    margin:2rem 0;
-    padding:1rem;
-    border-inline-start:.4rem solid var(--color-accent);
+    margin:var(--space-5);
+    padding:var(--space-3);
+    border-inline-start:.4rem solid var(--color-action);
     font-size:1.35rem;
 }
 
@@ -150,24 +150,26 @@ img{
 .documentation{
     grid-column:1/-1;
     padding:1rem;
-    background:#f1f1f1;
+    background:var(--color-white);
 }
 
 @media (min-width:52rem){
     main{
-        grid-template-columns:14rem 1fr;
+        grid-template-columns:15rem minmax(0,1fr);
     }
+
     .story-guide{
         position:sticky;
         inset-block-start:1rem;
-        z-index:var(--layer-sticky);
     }
+
     .pull-quote{
         position:relative;
+        margin-inline-start:-3rem;
+        background:var(--color-background);
         z-index:var(--layer-raised);
-        margin-inline-start:-4rem;
-        background:var(--color-surface);;
     }
+
     @supports (shape-outside:circle(50%)){
         .shape-portrait{
             float:inline-start;
@@ -175,6 +177,7 @@ img{
             shape-margin:1rem;}
         }
     }
+
     @supports (clip-path:polygon(0 0)){
         .feature-figure img{
             clip-path:polygon(0 0,100% 5%,94% 100%,6% 94%);}
