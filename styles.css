@@ -171,6 +171,7 @@ img{
         z-index:var(--layer-raised);
     }
 
+    
     @supports (shape-outside:circle(50%)){
         .shape-portrait{
             float:inline-start;
